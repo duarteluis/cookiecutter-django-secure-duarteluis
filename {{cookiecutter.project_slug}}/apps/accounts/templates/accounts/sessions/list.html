@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Sessions{% endblock %}
+{% block content %}
+<h2>Mes sessions actives</h2>
+
+<table>
+<tr><th>IP</th><th>Client</th><th>Dernière activité</th><th>Actuelle</th><th></th></tr>
+{% for s in sessions %}
+<tr>
+<td>{{ s.ip }}</td>
+<td>{{ s.user_agent }}</td>
+<td>{{ s.last_activity }}</td>
+<td>
+    {% if s.session_key == current_session_key %}
+    Oui
+    {% else %}
+    Non
+    {% endif %}
+</td>
+<td>
+    {% if s.session_key != current_session_key %}
+    <form method="post" action="{% url 'accounts_sessions:delete' s.session_key %}">
+        {% csrf_token %}
+        <button type="submit">Supprimer</button>
+    </form>
+    {% endif %}
+</td>
+</tr>
+{% endfor %}
+</table>
+
+<form method="post" action="{% url 'accounts_sessions:delete_others' %}">
+    {% csrf_token %}
+    <button type="submit">Déconnecter toutes les autres sessions</button>
+</form>
+{% endblock %}

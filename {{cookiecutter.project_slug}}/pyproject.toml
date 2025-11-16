@@ -1,0 +1,29 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_name }}"
+requires-python = ">={{ cookiecutter.python_version }}"
+dependencies = [
+  "Django=={{ cookiecutter.django_version }}",
+  "django-allauth[mfa]",
+  "psycopg[binary]",
+  "celery>=5.4",
+  "redis>=5.0",
+  "argon2-cffi>=23.0.0",
+  "django-csp>=4.0",
+  "django-user-sessions>=2.0.0",
+  "django-axes>=6.0",
+  "pwned-passwords-django>=5.0",
+  "django-pwned>=0.3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "ipython",
+  "pytest",
+  "ruff",
+  "pre-commit"
+]
+
+[tool.uv]
+default-venv = ".venv"

@@ -1,0 +1,25 @@
+{
+  "project_name": "My Django Project",
+  "project_slug": "myproject",
+  "app_name": "core",
+  "domain_name": "example.com",
+
+  "python_version": "3.12",
+  "django_version": "5.1",
+
+  "timezone": "UTC",
+  "language_code": "fr-ch",
+
+  "postgresql_db_name": "{{ cookiecutter.project_slug }}",
+  "postgresql_user": "{{ cookiecutter.project_slug }}",
+
+  "broker_backend": [
+    "valkey",
+    "redis",
+    "none"
+  ],
+
+  "use_celery": "y",
+  "use_flower": "y",
+  "use_uv": "y"
+}

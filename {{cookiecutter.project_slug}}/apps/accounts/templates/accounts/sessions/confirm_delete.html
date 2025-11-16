@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Confirmer la suppression{% endblock %}
+
+{% block content %}
+<h2>Supprimer la session</h2>
+
+<p>
+    Voulez-vous vraiment supprimer cette session ?
+</p>
+
+<ul>
+    <li><strong>IP :</strong> {{ session.ip }}</li>
+    <li><strong>User-Agent :</strong> {{ session.user_agent }}</li>
+    <li><strong>Dernière activité :</strong> {{ session.last_activity }}</li>
+</ul>
+
+<form method="post" action="{% url 'accounts_sessions:delete' session.session_key %}">
+    {% csrf_token %}
+    <button type="submit">Supprimer la session</button>
+</form>
+
+<p>
+    <a href="{% url 'accounts_sessions:list' %}">Retour</a>
+</p>
+
+{% endblock %}

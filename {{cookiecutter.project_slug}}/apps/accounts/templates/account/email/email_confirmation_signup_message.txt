@@ -1,0 +1,10 @@
+Bonjour,
+
+Merci pour votre inscription.
+
+Veuillez confirmer votre adresse e-mail :
+{{ activate_url }}
+
+Si vous n'êtes pas à l'origine de cette demande, ignorez ce message.
+
+L'équipe {{ current_site.name }}

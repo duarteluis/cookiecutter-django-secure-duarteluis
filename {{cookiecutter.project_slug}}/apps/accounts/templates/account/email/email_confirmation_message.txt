@@ -1,0 +1,7 @@
+Bonjour,
+
+Veuillez confirmer votre adresse e-mail :
+{{ activate_url }}
+
+Cordialement,
+L'équipe {{ current_site.name }}

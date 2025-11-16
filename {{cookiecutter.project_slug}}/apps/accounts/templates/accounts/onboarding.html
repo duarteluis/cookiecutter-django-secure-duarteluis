@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Onboarding{% endblock %}
+{% block content %}
+<h2>Bienvenue</h2>
+
+<p>Veuillez compléter les étapes suivantes :</p>
+
+<ol>
+    <li><a href="{{ profile_url }}">Compléter mon profil</a></li>
+    <li>
+        {% if mfa_enabled %}
+            MFA déjà activée.
+        {% else %}
+            <a href="{{ mfa_setup_url }}">Activer la MFA</a>
+        {% endif %}
+    </li>
+    <li><a href="{{ sessions_url }}">Contrôler mes sessions</a></li>
+</ol>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">J'ai terminé</button>
+</form>
+{% endblock %}
