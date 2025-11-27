@@ -111,7 +111,7 @@ MFA_TOTP_ISSUER = PROJECT_NAME
 
 SESSION_ENGINE = "user_sessions.backends.db"
 FORCE_MFA = True
-FORCE_MFA_SETUP_URL = "/accounts/2fa/"
+FORCE_MFA_SETUP_URL = "/accounts/two-factor/setup/"
 ONBOARDING_URL = "/onboarding/"
 
 # Celery
