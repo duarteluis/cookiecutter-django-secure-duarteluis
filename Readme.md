@@ -35,6 +35,8 @@ This template is designed for **serious Django deployments**, internal platforms
 * django-axes login rate limiting
 * Nginx login rate limiting (optional)
 
+**MFA routing:** `FORCE_MFA_SETUP_URL` is set to `/accounts/two-factor/setup/` to match the `allauth.mfa` setup view included at `/accounts/two-factor/`. If you customize the routes, keep the same prefix so the middleware and onboarding screens redirect correctly.
+
 ### **Development**
 
 * uv virtual environment
