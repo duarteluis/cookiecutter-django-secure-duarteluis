@@ -265,4 +265,4 @@ You may add a license of your choice (MIT recommended).
 ---
 
 ## 👍 Need more?
-Jus tell me what you need!
+Just tell me what you need!
