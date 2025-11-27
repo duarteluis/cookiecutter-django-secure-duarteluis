@@ -14,7 +14,8 @@ A fully hardened, production-ready Django project template featuring:
 * Modular settings and server bootstrap scripts
 * Optional provisioning using **Fabric** or **Ansible**
 
-This template is designed for **serious Django deployments**, internal platforms, SaaS, healthcare apps, or any project requiring strong authentication and secure defaults.
+This template is designed for **serious Django deployments**, internal platforms,
+SaaS, healthcare apps, or any project requiring strong authentication and secure defaults.
 
 **For the moment, it's still in beta.**
 
